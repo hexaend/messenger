@@ -250,21 +250,6 @@
     </option>
   </component>
   <component name="RunManager" selected="Docker.docker-compose.yaml: Compose Deployment">
-    <configuration name="UserServiceImplTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="user_service" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ru.hexaend.user_service.service.impl.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="ru.hexaend.user_service.service" />
-      <option name="MAIN_CLASS_NAME" value="ru.hexaend.user_service.service.UserServiceImplTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="user_service [spring-boot:run]" type="MavenRunConfiguration" factoryName="Maven" temporary="true">
       <MavenSettings>
         <option name="myGeneralSettings" />

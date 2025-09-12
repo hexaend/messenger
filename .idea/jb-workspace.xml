@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="WorkspaceSettings">
-    <project name="user_service" path="$PROJECT_DIR$/../user_service" />
     <project name="personal_chat" path="$PROJECT_DIR$/personal_chat" />
     <project name="group_chat" path="$PROJECT_DIR$/group_chat" />
+    <project name="user_service" path="$PROJECT_DIR$/user_service" />
     <option name="workspace" value="true" />
   </component>
 </project>

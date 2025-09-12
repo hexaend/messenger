@@ -3,6 +3,6 @@
   <component name="Encoding">
     <file url="file://$PROJECT_DIR$/group_chat/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/personal_chat/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/../user_service/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/user_service/src/main/java" charset="UTF-8" />
   </component>
 </project>

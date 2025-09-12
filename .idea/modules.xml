@@ -4,7 +4,6 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/group_chat/group_chat.iml" filepath="$PROJECT_DIR$/group_chat/group_chat.iml" />
       <module fileurl="file://$PROJECT_DIR$/personal_chat/personal_chat.iml" filepath="$PROJECT_DIR$/personal_chat/personal_chat.iml" />
-      <module fileurl="file://$PROJECT_DIR$/../user_service/user_service.iml" filepath="$PROJECT_DIR$/../user_service/user_service.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/workspace.iml" filepath="$PROJECT_DIR$/.idea/workspace.iml" />
     </modules>
   </component>

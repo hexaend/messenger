@@ -1,0 +1,58 @@
+spring:
+
+    application:
+        name: user_service
+    grpc:
+        server:
+            port: 9091
+#            health:
+#                enabled: false
+    cloud:
+        consul:
+            host: localhost
+            port: 8500
+            discovery:
+                health-check-interval: 10s
+                health-check-path: /actuator/health
+    security:
+        oauth2:
+            resourceserver:
+                jwt:
+                    issuer-uri: http://localhost:18080/realms/messenger-keycloak
+            client:
+                provider:
+                    keycloak:
+                        issuer-uri: http://localhost:18080/realms/messenger-keycloak
+                registration:
+                    keycloak:
+                        provider: keycloak
+                        client-id: user-service
+                        client-secret: 8VXlvvOsGFn8zCNKyWH0YAUeoc56t6am
+                        authorization-grant-type: client_credentials
+                        scope: openid,profile,email
+
+server:
+    port: 8081
+    address: 0.0.0.0
+
+keycloak:
+    serverUrl: http://localhost:18080
+    realm: master
+    main_realm: messenger-keycloak
+    username: admin
+    password: admin
+    clientId: admin-cli
+
+management:
+    endpoints:
+        web:
+            exposure:
+                include: health,info
+    endpoint:
+        health:
+            show-details: always
+#logging:
+#    level:
+#      org.springframework.cloud.consul: DEBUG
+
+#debug: true

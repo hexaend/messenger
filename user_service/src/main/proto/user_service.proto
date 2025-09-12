@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "ru.hexaend.user_service.proto";
+option java_outer_classname = "UserServiceProto";
+
+service Simple {
+  rpc UsernamesToIDs (ListOfStrings) returns (ResultResponse);
+}
+
+message ListOfStrings {
+  repeated string items = 1;
+}
+
+message ResultResponse {
+  map<string, string> results = 1;
+}
