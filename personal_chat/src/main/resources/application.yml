@@ -1,0 +1,62 @@
+spring:
+    application:
+        name: personal_chat
+    cloud:
+        loadbalancer:
+          retry:
+              enabled: true
+        consul:
+            port: 8500
+            host: localhost
+    kafka:
+      producer:
+          bootstrap-servers: "localhost:29092,localhost:39092,localhost:49092"
+          key-serializer: org.springframework.kafka.support.serializer.JsonSerializer
+          value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
+    #    spring:
+#        grpc:
+#            client:
+#                channels:
+#                    local:
+#                        address: "localhost:8081"
+
+    jpa:
+        hibernate:
+            ddl-auto: update
+        show-sql: true
+        properties:
+            hibernate:
+                format_sql: true
+
+
+    # TODO: change user-service to personal-chat
+    security:
+        oauth2:
+            resourceserver:
+                jwt:
+                    issuer-uri: http://localhost:18080/realms/messenger-keycloak
+            client:
+                provider:
+                    keycloak:
+                        issuer-uri: http://localhost:18080/realms/messenger-keycloak
+                registration:
+                    keycloak:
+                        provider: keycloak
+                        client-id: user-service
+                        client-secret: 8VXlvvOsGFn8zCNKyWH0YAUeoc56t6am
+                        authorization-grant-type: client_credentials
+                        scope: openid,profile,email
+    datasource:
+        url: jdbc:postgresql://localhost:5432/database
+        username: user
+        password: password
+        driver-class-name: org.postgresql.Driver
+
+
+server:
+    port: 8082
+
+kafka:
+    topic: personal_chat_events
+
+#debug: true
