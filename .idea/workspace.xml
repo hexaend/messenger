@@ -4,85 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="47614627-d690-461d-87f7-889bb7845d59" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dictionaries/project.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jb-workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jpa.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/material_theme_project_new.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker-compose.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/group_chat/.gitattributes" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/group_chat/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/group_chat/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/group_chat/mvnw" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/group_chat/mvnw.cmd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/group_chat/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/group_chat/src/main/java/ru/hexaend/group_chat/GroupChatApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/group_chat/src/main/java/ru/hexaend/group_chat/dto/response/ErrorResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/group_chat/src/main/java/ru/hexaend/group_chat/dto/response/GroupChatResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/group_chat/src/main/java/ru/hexaend/group_chat/entity/GroupChat.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/group_chat/src/main/java/ru/hexaend/group_chat/exceptions/GlobalExceptionHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/group_chat/src/main/java/ru/hexaend/group_chat/exceptions/custom/MissingChatIdentifierException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/group_chat/src/main/java/ru/hexaend/group_chat/exceptions/custom/PersonalChatNotFoundException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/group_chat/src/main/java/ru/hexaend/group_chat/exceptions/custom/UserNotFoundException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/group_chat/src/main/java/ru/hexaend/group_chat/grpc/GrpcClientService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/group_chat/src/main/java/ru/hexaend/group_chat/grpc/GrpcConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/group_chat/src/main/java/ru/hexaend/group_chat/grpc/impl/GrpcClientServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/group_chat/src/main/java/ru/hexaend/group_chat/mapper/GroupChatMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/group_chat/src/main/java/ru/hexaend/group_chat/repository/GroupChatRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/group_chat/src/main/java/ru/hexaend/group_chat/rest/GroupChatController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/group_chat/src/main/java/ru/hexaend/group_chat/security/KeycloakRoleConverter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/group_chat/src/main/java/ru/hexaend/group_chat/security/SecurityAuditorAware.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/group_chat/src/main/java/ru/hexaend/group_chat/security/SecurityConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/group_chat/src/main/proto/user_service.proto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/group_chat/src/main/resources/application.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/group_chat/src/test/java/ru/hexaend/group_chat/GroupChatApplicationTests.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/personal_chat/.gitattributes" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/personal_chat/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/personal_chat/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/personal_chat/mvnw" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/personal_chat/mvnw.cmd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/personal_chat/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/personal_chat/src/main/java/ru/hexaend/personal_chat/PersonalChatApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/personal_chat/src/main/java/ru/hexaend/personal_chat/dto/kafka/PersonalChatCreated.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/personal_chat/src/main/java/ru/hexaend/personal_chat/dto/kafka/PersonalChatDeleted.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/personal_chat/src/main/java/ru/hexaend/personal_chat/dto/request/CreatePersonalChatRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/personal_chat/src/main/java/ru/hexaend/personal_chat/dto/response/DeleteSuccessResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/personal_chat/src/main/java/ru/hexaend/personal_chat/dto/response/ErrorResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/personal_chat/src/main/java/ru/hexaend/personal_chat/dto/response/PersonalChatResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/personal_chat/src/main/java/ru/hexaend/personal_chat/entity/PersonalChat.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/personal_chat/src/main/java/ru/hexaend/personal_chat/exceptions/GlobalExceptionHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/personal_chat/src/main/java/ru/hexaend/personal_chat/exceptions/custom/MissingChatIdentifierException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/personal_chat/src/main/java/ru/hexaend/personal_chat/exceptions/custom/PersonalChatDeletedException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/personal_chat/src/main/java/ru/hexaend/personal_chat/exceptions/custom/PersonalChatNotFoundException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/personal_chat/src/main/java/ru/hexaend/personal_chat/exceptions/custom/UserNotFoundException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/personal_chat/src/main/java/ru/hexaend/personal_chat/grpc/GrpcClientService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/personal_chat/src/main/java/ru/hexaend/personal_chat/grpc/GrpcConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/personal_chat/src/main/java/ru/hexaend/personal_chat/grpc/impl/GrpcClientServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/personal_chat/src/main/java/ru/hexaend/personal_chat/kafka/KafkaConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/personal_chat/src/main/java/ru/hexaend/personal_chat/kafka/PersonalChatKafkaService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/personal_chat/src/main/java/ru/hexaend/personal_chat/kafka/impl/PersonalChatKafkaServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/personal_chat/src/main/java/ru/hexaend/personal_chat/mapper/PersonalChatResponseMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/personal_chat/src/main/java/ru/hexaend/personal_chat/repository/PersonalChatRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/personal_chat/src/main/java/ru/hexaend/personal_chat/rest/PersonalChatController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/personal_chat/src/main/java/ru/hexaend/personal_chat/security/KeycloakRoleConverter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/personal_chat/src/main/java/ru/hexaend/personal_chat/security/SecurityAuditorAware.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/personal_chat/src/main/java/ru/hexaend/personal_chat/security/SecurityConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/personal_chat/src/main/java/ru/hexaend/personal_chat/service/PersonalChatService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/personal_chat/src/main/java/ru/hexaend/personal_chat/service/impl/PersonalChatServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/personal_chat/src/main/proto/user_service.proto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/personal_chat/src/main/resources/application.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/personal_chat/src/test/java/ru/hexaend/personal_chat/PersonalChatApplicationTests.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server.json" afterDir="false" />
+    <list default="true" id="47614627-d690-461d-87f7-889bb7845d59" name="Changes" comment="Add user service implementation with gRPC support and configuration files">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/group_chat/src/main/java/ru/hexaend/group_chat/dto/response/GroupChatResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/group_chat/src/main/java/ru/hexaend/group_chat/dto/response/GroupChatResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/personal_chat/src/main/java/ru/hexaend/personal_chat/dto/response/PersonalChatResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/personal_chat/src/main/java/ru/hexaend/personal_chat/dto/response/PersonalChatResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/personal_chat/src/main/java/ru/hexaend/personal_chat/rest/PersonalChatController.java" beforeDir="false" afterPath="$PROJECT_DIR$/personal_chat/src/main/java/ru/hexaend/personal_chat/rest/PersonalChatController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -128,66 +54,66 @@
     <option name="showLibraryContents" value="true" />
     <option name="showVisibilityIcons" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Docker.docker-compose.yaml.consul-server: Compose Deployment.executor": "Run",
-    "Docker.docker-compose.yaml: Compose Deployment.executor": "Run",
-    "HTTP Request.scratch_14 | #1.executor": "Run",
-    "JUnit.UserServiceImplTest.executor": "Run",
-    "Maven.group_chat [clean,compile].executor": "Run",
-    "Maven.personal_chat [clean,compile].executor": "Run",
-    "Maven.personal_chat [clean,spring-boot:run].executor": "Run",
-    "Maven.personal_chat [clean,spring-boot:start].executor": "Run",
-    "Maven.personal_chat [clean].executor": "Run",
-    "Maven.personal_chat [compile].executor": "Run",
-    "Maven.user_service [clean,compile].executor": "Run",
-    "Maven.user_service [compile].executor": "Run",
-    "Maven.user_service [generate-sources].executor": "Run",
-    "Maven.user_service [io.github.ascopes:protobuf-maven-plugin:3.4.2:generate].executor": "Run",
-    "Maven.user_service [org.apache.maven.plugins:maven-clean-plugin:3.4.1:clean].executor": "Run",
-    "Maven.user_service [org.springframework.boot:spring-boot-maven-plugin:3.5.4:run].executor": "Run",
-    "Maven.user_service [spring-boot:run].executor": "Debug",
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
-    "RunOnceActivity.Workspaces.CheckRemotesActivity": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "RunOnceActivity.restore.workspace.module": "true",
-    "RunOnceActivity.workspace.git.set.grouping.by.repo": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "Spring Boot.PersonalChatApplication.executor": "Run",
-    "Spring Boot.UserServiceApplication.executor": "Run",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.includeInheritedMembers": "true",
-    "git-widget-placeholder": "master",
-    "ignore.virus.scanning.warn.message": "true",
-    "ignore_missing_gitignore": "true",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/vovam/Project/messenger/group_chat/src/main/java/ru/hexaend/group_chat",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "run.configurations.included.in.services": "true",
-    "settings.editor.selected.configurable": "com.github.copilot.settings.completions.CompletionsConfigurable",
-    "settings.editor.splitter.proportion": "0.24649122",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Docker.docker-compose.yaml.consul-server: Compose Deployment.executor&quot;: &quot;Run&quot;,
+    &quot;Docker.docker-compose.yaml: Compose Deployment.executor&quot;: &quot;Run&quot;,
+    &quot;HTTP Request.scratch_14 | #1.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.UserServiceImplTest.executor&quot;: &quot;Run&quot;,
+    &quot;Maven.group_chat [clean,compile].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.personal_chat [clean,compile].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.personal_chat [clean,spring-boot:run].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.personal_chat [clean,spring-boot:start].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.personal_chat [clean].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.personal_chat [compile].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.user_service [clean,compile].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.user_service [compile].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.user_service [generate-sources].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.user_service [io.github.ascopes:protobuf-maven-plugin:3.4.2:generate].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.user_service [org.apache.maven.plugins:maven-clean-plugin:3.4.1:clean].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.user_service [org.springframework.boot:spring-boot-maven-plugin:3.5.4:run].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.user_service [spring-boot:run].executor&quot;: &quot;Debug&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.Workspaces.CheckRemotesActivity&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.restore.workspace.module&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.workspace.git.set.grouping.by.repo&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;Spring Boot.PersonalChatApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.UserServiceApplication.executor&quot;: &quot;Run&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.includeInheritedMembers&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;ignore_missing_gitignore&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/vovam/Project/messenger/group_chat/src/main/java/ru/hexaend/group_chat&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;run.configurations.included.in.services&quot;: &quot;true&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.github.copilot.settings.completions.CompletionsConfigurable&quot;,
+    &quot;settings.editor.splitter.proportion&quot;: &quot;0.24649122&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File": [
-      "HTTP Request"
+  &quot;keyToStringList&quot;: {
+    &quot;com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File&quot;: [
+      &quot;HTTP Request&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="ReactorSettings">
     <option name="notificationShown" value="true" />
   </component>
@@ -217,6 +143,13 @@
     </key>
   </component>
   <component name="RunAnythingCache">
+    <myKeys>
+      <visibility group="Gradle Tasks" flag="true" />
+      <visibility group="HTTP Requests" flag="true" />
+      <visibility group="Maven Goals" flag="true" />
+      <visibility group="Recent projects" flag="true" />
+      <visibility group="Run configurations" flag="true" />
+    </myKeys>
     <option name="myCommands">
       <command value="mvn generate-sources " />
       <command value="protoc --version " />
@@ -235,18 +168,6 @@
         <option value="QuarkusRunConfigurationType" />
         <option value="SpringBootApplicationConfigurationType" />
       </set>
-    </option>
-    <option name="configurationStatuses">
-      <map>
-        <entry key="SpringBootApplicationConfigurationType">
-          <value>
-            <map>
-              <entry key="PersonalChatApplication" value="STOPPED" />
-              <entry key="UserServiceApplication" value="STOPPED" />
-            </map>
-          </value>
-        </entry>
-      </map>
     </option>
   </component>
   <component name="RunManager" selected="Docker.docker-compose.yaml: Compose Deployment">
@@ -391,12 +312,37 @@
       <workItem from="1757533936912" duration="845000" />
       <workItem from="1757535943792" duration="1444000" />
       <workItem from="1757617306627" duration="11000" />
-      <workItem from="1757704865366" duration="1998000" />
+      <workItem from="1757704865366" duration="2925000" />
     </task>
+    <task id="LOCAL-00001" summary="Add initial project structure and user service, personal chat and starting development with group chat">
+      <option name="closed" value="true" />
+      <created>1757706944449</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1757706944449</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Add user service implementation with gRPC support and configuration files">
+      <option name="closed" value="true" />
+      <created>1757707023774</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1757707023774</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="UnloadedProjectSettings">
+    <option value="$PROJECT_DIR$/../user_service" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Add initial project structure and user service, personal chat and starting development with group chat" />
+    <MESSAGE value="Add user service implementation with gRPC support and configuration files" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add user service implementation with gRPC support and configuration files" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

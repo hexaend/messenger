@@ -27,14 +27,10 @@ public class PersonalChatController {
     }
 
     @GetMapping
-    public ResponseEntity<?> getPersonalChat(
-            @RequestParam(required = false) String username,
-            @RequestParam(required = false, name="user_id") String userId,
-            @RequestParam(required = false, name="chat_id") UUID chatId,
-            Principal principal) {
+    public ResponseEntity<?> getPersonalChat(@RequestParam(required = false) String username, @RequestParam(required = false, name = "user_id") String userId, @RequestParam(required = false, name = "chat_id") UUID chatId, Principal principal) {
 
         String owner = principal.getName();
-        PersonalChat personalChat;
+        PersonalChat personalChat = null;
 
         if (username != null) {
             personalChat = personalChatService.getPersonalChatByUsername(username, owner);
@@ -42,7 +38,9 @@ public class PersonalChatController {
             personalChat = personalChatService.getPersonalChatByUserId(userId, owner);
         } else if (chatId != null) {
             personalChat = personalChatService.getPersonalChatByChatId(chatId);
-        } else {
+        }
+
+        if (personalChat == null) {
             throw new MissingChatIdentifierException("At least one identifier (username, user_id, chat_id) must be provided");
         }
         PersonalChatResponse response = personalChatResponseMapper.toDto(personalChat);
@@ -53,14 +51,15 @@ public class PersonalChatController {
     @PostMapping
     public ResponseEntity<?> createPersonalChat(
             @RequestParam(required = false) String username,
-            @RequestParam(required = false, name = "user_id") String userId,
-            Principal principal) {
-        PersonalChat personalChat;
+            @RequestParam(required = false, name = "user_id") String userId, Principal principal) {
+        PersonalChat personalChat = null;
         if (username != null) {
             personalChat = personalChatService.createPersonalChatByUsername(username, principal.getName());
         } else if (userId != null) {
             personalChat = personalChatService.createPersonalChatByUserId(userId, principal.getName());
-        } else {
+        }
+
+        if (personalChat == null) {
             throw new MissingChatIdentifierException("Either username or user_id must be provided");
         }
 
@@ -68,12 +67,7 @@ public class PersonalChatController {
     }
 
     @DeleteMapping
-    public ResponseEntity<?> deletePersonalChat(
-            @RequestParam(required = false) String username,
-            @RequestParam(required = false, name = "user_id") String userId,
-            @RequestParam(required = false, name = "chat_id") UUID chatId,
-            Principal principal
-    ){
+    public ResponseEntity<?> deletePersonalChat(@RequestParam(required = false) String username, @RequestParam(required = false, name = "user_id") String userId, @RequestParam(required = false, name = "chat_id") UUID chatId, Principal principal) {
         if (username != null) {
             personalChatService.deletePersonalChatByUsername(username, principal.getName());
         } else if (userId != null) {
@@ -85,7 +79,6 @@ public class PersonalChatController {
         }
         return ResponseEntity.ok(new DeleteSuccessResponse("Personal chat deleted successfully"));
     }
-
 
 
 }
