@@ -1,6 +1,8 @@
 package ru.hexaend.group_chat.mapper;
 
 import org.mapstruct.*;
+import ru.hexaend.group_chat.dto.kafka.GroupChatCreated;
+import ru.hexaend.group_chat.dto.request.CreateGroupChatRequest;
 import ru.hexaend.group_chat.dto.response.GroupChatResponse;
 import ru.hexaend.group_chat.entity.GroupChat;
 
@@ -9,6 +11,10 @@ public interface GroupChatMapper {
     GroupChat toEntity(GroupChatResponse groupChatResponse);
 
     GroupChatResponse toDto(GroupChat groupChat);
+
+    GroupChat fromDto(CreateGroupChatRequest groupChatResponse);
+
+    GroupChatCreated toKafkaDto(GroupChat groupChat);
 
     @BeanMapping(nullValuePropertyMappingStrategy = NullValuePropertyMappingStrategy.IGNORE)
     GroupChat partialUpdate(GroupChatResponse groupChatResponse, @MappingTarget GroupChat groupChat);

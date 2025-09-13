@@ -11,6 +11,7 @@ import org.springframework.grpc.client.GrpcChannelFactory;
 import org.springframework.grpc.server.service.GrpcService;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.oauth2.server.resource.authentication.JwtAuthenticationToken;
+import ru.hexaend.group_chat.exceptions.custom.UserNotFoundException;
 import ru.hexaend.group_chat.grpc.GrpcClientService;
 import ru.hexaend.personal_chat.proto.ListOfStrings;
 import ru.hexaend.personal_chat.proto.ResultResponse;

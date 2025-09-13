@@ -4,10 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="47614627-d690-461d-87f7-889bb7845d59" name="Changes" comment="Add user service implementation with gRPC support and configuration files">
+    <list default="true" id="47614627-d690-461d-87f7-889bb7845d59" name="Changes" comment="Refactor response DTOs to include JSON property annotations and improve parameter order in PersonalChatController">
+      <change afterPath="$PROJECT_DIR$/group_chat/src/main/java/ru/hexaend/group_chat/dto/kafka/GroupChatCreated.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/group_chat/src/main/java/ru/hexaend/group_chat/dto/request/CreateGroupChatRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/group_chat/src/main/java/ru/hexaend/group_chat/kafka/GroupChatKafkaService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/group_chat/src/main/java/ru/hexaend/group_chat/kafka/KafkaConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/group_chat/src/main/java/ru/hexaend/group_chat/kafka/impl/GroupChatKafkaServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/group_chat/src/main/java/ru/hexaend/group_chat/service/GroupChatService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/group_chat/src/main/java/ru/hexaend/group_chat/service/impl/GroupChatServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/group_chat/src/main/java/ru/hexaend/group_chat/dto/response/GroupChatResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/group_chat/src/main/java/ru/hexaend/group_chat/dto/response/GroupChatResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/personal_chat/src/main/java/ru/hexaend/personal_chat/dto/response/PersonalChatResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/personal_chat/src/main/java/ru/hexaend/personal_chat/dto/response/PersonalChatResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/group_chat/src/main/java/ru/hexaend/group_chat/grpc/impl/GrpcClientServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/group_chat/src/main/java/ru/hexaend/group_chat/grpc/impl/GrpcClientServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/group_chat/src/main/java/ru/hexaend/group_chat/mapper/GroupChatMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/group_chat/src/main/java/ru/hexaend/group_chat/mapper/GroupChatMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/group_chat/src/main/java/ru/hexaend/group_chat/rest/GroupChatController.java" beforeDir="false" afterPath="$PROJECT_DIR$/group_chat/src/main/java/ru/hexaend/group_chat/rest/GroupChatController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/group_chat/src/main/java/ru/hexaend/group_chat/security/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/group_chat/src/main/java/ru/hexaend/group_chat/security/SecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/group_chat/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/group_chat/src/main/resources/application.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/personal_chat/src/main/java/ru/hexaend/personal_chat/rest/PersonalChatController.java" beforeDir="false" afterPath="$PROJECT_DIR$/personal_chat/src/main/java/ru/hexaend/personal_chat/rest/PersonalChatController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -18,12 +28,12 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
         <option value="JUnit5 Test Class" />
-        <option value="Record" />
         <option value="Exception" />
         <option value="com.intellij.jpb.JpaRepository" />
         <option value="com.intellij.jpb.NewInterface" />
+        <option value="Record" />
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -54,75 +64,77 @@
     <option name="showLibraryContents" value="true" />
     <option name="showVisibilityIcons" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Docker.docker-compose.yaml.consul-server: Compose Deployment.executor&quot;: &quot;Run&quot;,
-    &quot;Docker.docker-compose.yaml: Compose Deployment.executor&quot;: &quot;Run&quot;,
-    &quot;HTTP Request.scratch_14 | #1.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.UserServiceImplTest.executor&quot;: &quot;Run&quot;,
-    &quot;Maven.group_chat [clean,compile].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.personal_chat [clean,compile].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.personal_chat [clean,spring-boot:run].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.personal_chat [clean,spring-boot:start].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.personal_chat [clean].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.personal_chat [compile].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.user_service [clean,compile].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.user_service [compile].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.user_service [generate-sources].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.user_service [io.github.ascopes:protobuf-maven-plugin:3.4.2:generate].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.user_service [org.apache.maven.plugins:maven-clean-plugin:3.4.1:clean].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.user_service [org.springframework.boot:spring-boot-maven-plugin:3.5.4:run].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.user_service [spring-boot:run].executor&quot;: &quot;Debug&quot;,
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
-    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
-    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
-    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.Workspaces.CheckRemotesActivity&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.restore.workspace.module&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.workspace.git.set.grouping.by.repo&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;Spring Boot.PersonalChatApplication.executor&quot;: &quot;Run&quot;,
-    &quot;Spring Boot.UserServiceApplication.executor&quot;: &quot;Run&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.includeInheritedMembers&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;ignore_missing_gitignore&quot;: &quot;true&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/vovam/Project/messenger/group_chat/src/main/java/ru/hexaend/group_chat&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
-    &quot;run.configurations.included.in.services&quot;: &quot;true&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;com.github.copilot.settings.completions.CompletionsConfigurable&quot;,
-    &quot;settings.editor.splitter.proportion&quot;: &quot;0.24649122&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Docker.docker-compose.yaml.consul-server: Compose Deployment.executor": "Run",
+    "Docker.docker-compose.yaml: Compose Deployment.executor": "Run",
+    "HTTP Request.scratch_14 | #1.executor": "Run",
+    "JUnit.UserServiceImplTest.executor": "Run",
+    "Maven.group_chat [clean,compile].executor": "Run",
+    "Maven.personal_chat [clean,compile].executor": "Run",
+    "Maven.personal_chat [clean,spring-boot:run].executor": "Run",
+    "Maven.personal_chat [clean,spring-boot:start].executor": "Run",
+    "Maven.personal_chat [clean].executor": "Run",
+    "Maven.personal_chat [compile].executor": "Run",
+    "Maven.user_service [clean,compile].executor": "Run",
+    "Maven.user_service [compile].executor": "Run",
+    "Maven.user_service [generate-sources].executor": "Run",
+    "Maven.user_service [io.github.ascopes:protobuf-maven-plugin:3.4.2:generate].executor": "Run",
+    "Maven.user_service [org.apache.maven.plugins:maven-clean-plugin:3.4.1:clean].executor": "Run",
+    "Maven.user_service [org.springframework.boot:spring-boot-maven-plugin:3.5.4:run].executor": "Run",
+    "Maven.user_service [spring-boot:run].executor": "Debug",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.Workspaces.CheckRemotesActivity": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.restore.workspace.module": "true",
+    "RunOnceActivity.workspace.git.set.grouping.by.repo": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "Spring Boot.GroupChatApplication.executor": "Run",
+    "Spring Boot.PersonalChatApplication.executor": "Run",
+    "Spring Boot.UserServiceApplication.executor": "Run",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.includeInheritedMembers": "true",
+    "git-widget-placeholder": "master",
+    "ignore.virus.scanning.warn.message": "true",
+    "ignore_missing_gitignore": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/vovam/Project/messenger/group_chat/src/main/java/ru/hexaend/group_chat",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "run.configurations.included.in.services": "true",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "settings.editor.splitter.proportion": "0.24649122",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File&quot;: [
-      &quot;HTTP Request&quot;
+  "keyToStringList": {
+    "com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File": [
+      "HTTP Request"
     ]
   }
-}</component>
+}]]></component>
   <component name="ReactorSettings">
     <option name="notificationShown" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
+      <recent name="ru.hexaend.group_chat.kafka.impl" />
+      <recent name="ru.hexaend.group_chat.service.impl" />
       <recent name="ru.hexaend.personal_chat.kafka.impl" />
       <recent name="ru.hexaend.personal_chat.service" />
       <recent name="ru.hexaend.user_service.service" />
-      <recent name="ru.hexaend.user_service.security" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\vovam\Project\messenger\group_chat\src\main\java\ru\hexaend\group_chat" />
@@ -169,8 +181,20 @@
         <option value="SpringBootApplicationConfigurationType" />
       </set>
     </option>
+    <option name="configurationStatuses">
+      <map>
+        <entry key="SpringBootApplicationConfigurationType">
+          <value>
+            <map>
+              <entry key="GroupChatApplication" value="STOPPED" />
+              <entry key="UserServiceApplication" value="STOPPED" />
+            </map>
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
-  <component name="RunManager" selected="Docker.docker-compose.yaml: Compose Deployment">
+  <component name="RunManager" selected="Spring Boot.GroupChatApplication">
     <configuration name="user_service [spring-boot:run]" type="MavenRunConfiguration" factoryName="Maven" temporary="true">
       <MavenSettings>
         <option name="myGeneralSettings" />
@@ -260,9 +284,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Docker.docker-compose.yaml.consul-server: Compose Deployment" />
         <item itemvalue="Docker.docker-compose.yaml: Compose Deployment" />
         <item itemvalue="Spring Boot.PersonalChatApplication" />
-        <item itemvalue="Docker.docker-compose.yaml.consul-server: Compose Deployment" />
         <item itemvalue="Spring Boot.PersonalChatApplication" />
         <item itemvalue="Spring Boot.PersonalChatApplication" />
       </list>
@@ -272,11 +296,12 @@
     <attachedChunks>
       <set>
         <option value="bundled-jdk-9823dce3aa75-bf35d07a577b-intellij.indexing.shared.core-IU-252.25557.131" />
+        <option value="bundled-js-predefined-d6986cc7102b-b598e85cdad2-JavaScript-IU-252.25557.131" />
       </set>
     </attachedChunks>
   </component>
   <component name="StructureViewState">
-    <option name="selectedTab" value="Logical" />
+    <option name="selectedTab" value="Physical" />
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -312,7 +337,10 @@
       <workItem from="1757533936912" duration="845000" />
       <workItem from="1757535943792" duration="1444000" />
       <workItem from="1757617306627" duration="11000" />
-      <workItem from="1757704865366" duration="2925000" />
+      <workItem from="1757704865366" duration="2999000" />
+      <workItem from="1757748539507" duration="4000" />
+      <workItem from="1757776645697" duration="150000" />
+      <workItem from="1757776806405" duration="3225000" />
     </task>
     <task id="LOCAL-00001" summary="Add initial project structure and user service, personal chat and starting development with group chat">
       <option name="closed" value="true" />
@@ -330,7 +358,15 @@
       <option name="project" value="LOCAL" />
       <updated>1757707023774</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Refactor response DTOs to include JSON property annotations and improve parameter order in PersonalChatController">
+      <option name="closed" value="true" />
+      <created>1757707871670</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1757707871670</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -342,7 +378,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Add initial project structure and user service, personal chat and starting development with group chat" />
     <MESSAGE value="Add user service implementation with gRPC support and configuration files" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add user service implementation with gRPC support and configuration files" />
+    <MESSAGE value="Refactor response DTOs to include JSON property annotations and improve parameter order in PersonalChatController" />
+    <option name="LAST_COMMIT_MESSAGE" value="Refactor response DTOs to include JSON property annotations and improve parameter order in PersonalChatController" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

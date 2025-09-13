@@ -27,7 +27,11 @@ public class PersonalChatController {
     }
 
     @GetMapping
-    public ResponseEntity<?> getPersonalChat(@RequestParam(required = false) String username, @RequestParam(required = false, name = "user_id") String userId, @RequestParam(required = false, name = "chat_id") UUID chatId, Principal principal) {
+    public ResponseEntity<?> getPersonalChat(
+            @RequestParam(required = false) String username,
+            @RequestParam(required = false, name = "user_id") String userId,
+            @RequestParam(required = false, name = "chat_id") UUID chatId,
+            Principal principal) {
 
         String owner = principal.getName();
         PersonalChat personalChat = null;
@@ -51,7 +55,8 @@ public class PersonalChatController {
     @PostMapping
     public ResponseEntity<?> createPersonalChat(
             @RequestParam(required = false) String username,
-            @RequestParam(required = false, name = "user_id") String userId, Principal principal) {
+            @RequestParam(required = false, name = "user_id") String userId,
+            Principal principal) {
         PersonalChat personalChat = null;
         if (username != null) {
             personalChat = personalChatService.createPersonalChatByUsername(username, principal.getName());
@@ -67,7 +72,11 @@ public class PersonalChatController {
     }
 
     @DeleteMapping
-    public ResponseEntity<?> deletePersonalChat(@RequestParam(required = false) String username, @RequestParam(required = false, name = "user_id") String userId, @RequestParam(required = false, name = "chat_id") UUID chatId, Principal principal) {
+    public ResponseEntity<?> deletePersonalChat(
+            @RequestParam(required = false) String username,
+            @RequestParam(required = false, name = "user_id") String userId,
+            @RequestParam(required = false, name = "chat_id") UUID chatId,
+            Principal principal) {
         if (username != null) {
             personalChatService.deletePersonalChatByUsername(username, principal.getName());
         } else if (userId != null) {
