@@ -1,6 +1,7 @@
 package ru.hexaend.group_chat.entity;
 
 import jakarta.persistence.*;
+import jakarta.validation.constraints.NotEmpty;
 import jakarta.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -62,12 +63,18 @@ public class GroupChat {
     private String updatedBy;
 
     public void addUser(String userId) {
-        if (!users.contains(userId)) {
-            users.add(userId);
-        }
+        users.add(userId);
     }
 
     public void removeUser(String userId) {
         users.remove(userId);
+    }
+
+    public void addUsers(HashSet<String> newUsers) {
+        users.addAll(newUsers);
+    }
+
+    public void removeUsers(Set<String> users) {
+        this.users.removeAll(users);
     }
 }
