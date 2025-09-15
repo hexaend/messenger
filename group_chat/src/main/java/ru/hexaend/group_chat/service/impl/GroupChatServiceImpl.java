@@ -7,7 +7,6 @@ import ru.hexaend.group_chat.dto.request.CreateGroupChatRequest;
 import ru.hexaend.group_chat.dto.request.DeleteUsersRequest;
 import ru.hexaend.group_chat.entity.GroupChat;
 import ru.hexaend.group_chat.exceptions.custom.GroupChatNotFoundException;
-import ru.hexaend.group_chat.grpc.GrpcClientService;
 import ru.hexaend.group_chat.kafka.GroupChatKafkaService;
 import ru.hexaend.group_chat.mapper.GroupChatMapper;
 import ru.hexaend.group_chat.repository.GroupChatRepository;
@@ -24,6 +23,13 @@ public class GroupChatServiceImpl implements GroupChatService {
     private final GroupChatKafkaService groupChatKafkaService;
 
     @Override
+    public GroupChat getGroupById(UUID chatId, String userId) {
+        return groupChatRepository
+                .findByChatIdAndUser(chatId, userId)
+                .orElseThrow(() -> new GroupChatNotFoundException(chatId));
+    }
+
+    @Override
     public GroupChat createGroupChat(CreateGroupChatRequest chatRequest, String ownerId) {
         GroupChat groupChat = groupChatMapper.fromDto(chatRequest);
         groupChat.setOwnerId(ownerId);
@@ -36,21 +42,16 @@ public class GroupChatServiceImpl implements GroupChatService {
     public GroupChat addUsersToGroupChat(UUID chatId, AddUsersRequest users, String userId) {
         var groupChat = this.getGroupById(chatId, userId);
         groupChat.addUsers(new HashSet<>(users.users()));
+        groupChatKafkaService.addUsersToGroupChat(groupChat, users.users());
         return groupChatRepository.save(groupChat);
     }
 
-    @Override
-    public GroupChat getGroupById(UUID chatId, String userId) {
-        return groupChatRepository
-                .findByChatIdAndUser(chatId, userId)
-                .orElseThrow(() -> new GroupChatNotFoundException(chatId));
-
-    }
 
     @Override
     public void deleteGroupChatById(UUID chatId, String userId) {
         var groupChat = this.getGroupById(chatId, userId);
         groupChat.setIsDeleted(true);
+        groupChatKafkaService.deleteGroupChat(groupChat);
         groupChatRepository.save(groupChat);
     }
 
@@ -58,6 +59,7 @@ public class GroupChatServiceImpl implements GroupChatService {
     public GroupChat deleteUsersFromChat(UUID chatId, DeleteUsersRequest deleteUsersRequest, String userId) {
         var groupChat = this.getGroupById(chatId, userId);
         groupChat.removeUsers(deleteUsersRequest.users());
+        groupChatKafkaService.deleteUsersFromGroupChat(groupChat, deleteUsersRequest.users());
         return groupChatRepository.save(groupChat);
     }
 
@@ -65,6 +67,7 @@ public class GroupChatServiceImpl implements GroupChatService {
     public GroupChat changeNameGroup(UUID chatId, String name, String userId) {
         var groupChat = this.getGroupById(chatId, userId);
         groupChat.setName(name);
+        groupChatKafkaService.renamedGroupChat(groupChat, groupChat.getName());
         return groupChatRepository.save(groupChat);
     }
 
